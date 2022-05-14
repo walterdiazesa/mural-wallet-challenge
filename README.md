@@ -1,34 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Challenge project (part I) for BairesDev/MuralXYZ
 
-## Getting Started
+[Demo](https://mural-wallet-challenge.vercel.app/)
 
-First, run the development server:
+![logo512](https://user-images.githubusercontent.com/58494087/168405096-2daca8b5-496b-4300-acf6-eed8e1df8214.png)
+-- lowpoly dodo logo
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- MetaMask integration 🦊
+- Deployed on Vercel ☁️
+- Full responsive 📱
+- Auto update for new transactions 🔄
+- Pseudo-cache layer ⚡
+- PWA ready!!! 💌
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![dodopallette](https://user-images.githubusercontent.com/58494087/168405221-8eeef88a-a07f-46e3-b02d-3a24abf96ac0.jpg)
