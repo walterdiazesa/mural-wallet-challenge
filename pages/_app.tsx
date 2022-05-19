@@ -2,8 +2,7 @@ import "../styles/globals.css";
 import "../extends";
 import type { AppProps } from "next/app";
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
-import MetaWallet from "../components/MetaWallet";
-import Layout from "../components/Layout";
+import { MetaWallet, Layout } from "../components";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -18,7 +17,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
         />
       </Head>
-      <ThirdwebProvider desiredChainId={ChainId.Rinkeby}>
+      {/* sdkOptions, chainRpc, supportedChains, walletConnectors, dAppMeta,
+      desiredChainId, storageInterface, queryClient, autoConnect, children, */}
+      <ThirdwebProvider
+        desiredChainId={ChainId.Rinkeby}
+        walletConnectors={["injected", "gnosis"]}
+      >
         <Layout>
           <MetaWallet>
             <Component {...pageProps} />
