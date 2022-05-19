@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import SafeProvider, { useSafeAppsSDK } from "@gnosis.pm/safe-apps-react-sdk";
 import { Loader } from "../components";
 
-const gnosis = () => {
+const Gnosis = () => {
   const address = useAddress();
   const connectWithGnosis = useGnosis();
   const disconnectWallet = useDisconnect();
@@ -46,7 +46,7 @@ const SafeWrapper = () => {
         loader={<Loader />}
         opts={{ allowedDomains: [/gnosis-safe.io/] }}
       >
-        {gnosis}
+        {Gnosis}
       </SafeProvider>
     </div>
   );
