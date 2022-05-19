@@ -13,6 +13,10 @@ const Gnosis = () => {
 
   return (
     <>
+      <div className="bg-white min-h-screen min-w-screen">
+        dawdwawwdaawddawdwawwdaawddawdwawwdaawddawdwawwdaawddawdwawwdaawddawdwawwdaawddawdwawwdaawd
+        dawdwawwdaawddawdwawwdaawd
+      </div>
       <p
         onClick={async () => {
           const gnosisLogin = await connectWithGnosis({
