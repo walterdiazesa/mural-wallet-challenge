@@ -41,6 +41,7 @@ const SafeWrapper = () => {
           Back to Main
         </p>
       </div>
+      {/* @ts-ignore */}
       <SafeProvider
         loader={<Loader />}
         opts={{ allowedDomains: [/gnosis-safe.io/] }}
