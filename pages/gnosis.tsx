@@ -13,10 +13,6 @@ const Gnosis = () => {
 
   return (
     <>
-      <div className="bg-white min-h-screen min-w-screen">
-        dawdwawwdaawddawdwawwdaawddawdwawwdaawddawdwawwdaawddawdwawwdaawddawdwawwdaawddawdwawwdaawd
-        dawdwawwdaawddawdwawwdaawd
-      </div>
       <p
         onClick={async () => {
           const gnosisLogin = await connectWithGnosis({
@@ -26,9 +22,15 @@ const Gnosis = () => {
           if (gnosisLogin.error) return;
           console.log("GNOSIS", gnosisLogin.data);
         }}
+        className="text-white text-lg"
       >
-        wwwwwwwwwwwwwwwwwww
+        useGnosis
       </p>
+      {connected && <p className="text-white text-lg">Connected with Gnosis</p>}
+      {sdk && <p className="text-white text-lg">SDK: {JSON.stringify(sdk)}</p>}
+      {safe && (
+        <p className="text-white text-lg">Safe: {JSON.stringify(safe)}</p>
+      )}
     </>
   );
 };
@@ -37,21 +39,23 @@ const SafeWrapper = () => {
   const router = useRouter();
   return (
     <div className="px-3 sm:px-8">
-      <div className="my-3 flex">
-        <p
-          onClick={() => router.replace("/")}
-          className="w-full cursor-pointer bg-gradient-to-br from-dodo-mint-clear to-dodo-mint-end shadow-dodo-mint-end/40 hover:shadow-dodo-mint-end/60 rounded-lg py-2 px-4 font-medium text-white transform-gpu transition ease-in-out duration-200 shadow-lg hover:scale-y-105"
+      <>
+        <div className="my-3 flex">
+          <p
+            onClick={() => router.replace("/")}
+            className="w-full cursor-pointer bg-gradient-to-br from-dodo-mint-clear to-dodo-mint-end shadow-dodo-mint-end/40 hover:shadow-dodo-mint-end/60 rounded-lg py-2 px-4 font-medium text-white transform-gpu transition ease-in-out duration-200 shadow-lg hover:scale-y-105"
+          >
+            Back to Main
+          </p>
+        </div>
+        {/* @ts-ignore */}
+        <SafeProvider
+          loader={<Loader />}
+          opts={{ allowedDomains: [/gnosis-safe.io/] }}
         >
-          Back to Main
-        </p>
-      </div>
-      {/* @ts-ignore */}
-      <SafeProvider
-        loader={<Loader />}
-        opts={{ allowedDomains: [/gnosis-safe.io/] }}
-      >
-        {Gnosis}
-      </SafeProvider>
+          <Gnosis />
+        </SafeProvider>
+      </>
     </div>
   );
 };
